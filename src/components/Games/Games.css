@@ -1,0 +1,50 @@
+.body{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+   
+}
+.game-area{
+    background-color: wheat;
+    margin-left: 80px;
+    border-radius: 15px;
+    padding: 10px;
+    
+
+
+}
+.game-plan{
+    color: blueviolet;
+}
+.side-bar{
+    width: 400px;
+    background-color: wheat;
+    margin-right: 80px;
+    border-radius: 15px;
+    padding: 20px;
+    
+}
+.name{
+    line-height: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.info{
+    background-color: bisque;
+    padding:10px;
+    text-align: center;
+    line-height:0rem;
+    display:flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.time{
+    background-color: burlywood;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 25px;
+}

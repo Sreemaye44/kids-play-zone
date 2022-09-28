@@ -1,0 +1,17 @@
+.header{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left:150px ;
+}
+.icon{
+    font-size: xxx-large;
+    color: blueviolet;
+}
+.title{
+    color: red;
+    font-size: xx-large;
+}
