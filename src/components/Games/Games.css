@@ -1,27 +1,35 @@
 .body{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 80px;
+    gap: 50px;
    
 }
 .game-area{
     background-color: wheat;
     margin-left: 80px;
     border-radius: 15px;
-    padding: 10px;
+    padding: 20px;
     
 
 
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 .game-plan{
     color: blueviolet;
 }
 .side-bar{
-    width: 400px;
+    width: 300px;
+    height: 600px;
     background-color: wheat;
     margin-right: 80px;
     border-radius: 15px;
     padding: 20px;
+    position: sticky;
+    top: 0;
     
 }
 .name{
@@ -37,7 +45,7 @@
     text-align: center;
     line-height:0rem;
     display:flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     margin-bottom: 15px;
     margin-top: 15px;

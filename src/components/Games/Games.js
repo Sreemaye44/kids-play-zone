@@ -15,11 +15,11 @@ const Games = () => {
         <div className='body'>
         <div className='game-area'>
             <div>
-                <h3 className='game-plan'>Today's GamePlan for your Kid</h3>
+                <h2 className='game-plan'>Today's GamePlan for your Kid</h2>
             </div> 
-            <div>
+            <div className='card-container'>
             {
-               games.map(game=><Game game={game}></Game>)
+               games.map(game=><Game game={game} key={game.id}></Game>)
             }
             </div>
         </div>

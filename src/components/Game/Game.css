@@ -1,0 +1,19 @@
+.card{
+    background-color:burlywood;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: normal;
+
+}
+.card img{
+    height: 200px;
+    width: 300px;
+}
+.btn-add{
+    width: 100%;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
