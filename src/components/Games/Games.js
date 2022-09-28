@@ -1,7 +1,16 @@
-import React from 'react';
+import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useState } from 'react';
+import Game from '../Game/Game';
 import './Games.css';
 
 const Games = () => {
+    const[games,setGames]=useState([]);
+    useEffect(()=>{
+        fetch('data.json')
+        .then(res=>res.json())
+        .then(data=>setGames(data))
+
+    },[]);
     return (
         <div className='body'>
         <div className='game-area'>
@@ -9,12 +18,14 @@ const Games = () => {
                 <h3 className='game-plan'>Today's GamePlan for your Kid</h3>
             </div> 
             <div>
-                <h4>Game list</h4>
+            {
+               games.map(game=><Game game={game}></Game>)
+            }
             </div>
         </div>
         <div className='side-bar'>
         <div className='name'>
-            <img src="../../../public/logo192.png" alt="hi" srcset="" />
+            <img src="../../../public/baby.jpg" alt="hi" />
             <div>
             <h2>Sagnik Kundu</h2>
             <p><small>Dhaka, Bangladesh</small></p>
