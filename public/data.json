@@ -6,7 +6,7 @@
             "details": "Everyone knows how to play hide and seek, but just in case you don’t, here is how. Everyone except the person who is “it” will need to hide. Whoever is “it” will need to look for everyone else. The game only ends when everyone is found ",
             "img": "https://cdn.cdnparenting.com/articles/2018/06/162225701-H.webp",
             "Age": "5-12",
-            "time": 30
+            "time": 40
             
           },
           {
@@ -22,8 +22,8 @@
             "name": "Chain Tag",
             "details": "When the person who is “it” catches someone, they will need to join hands and chase down the rest of the players. Whoever gets caught is a new link in the chain. The game ends when the chain is complete, and no more players are left to chase.",
             "img": "https://cdn.cdnparenting.com/articles/2018/06/627594791-H.webp",
-            "Age": "5-12",
-            "time": 40
+            "Age": "8-18",
+            "time": 60
             
           },
           {
@@ -31,23 +31,23 @@
             "name": "Outdoor Bowling",
             "details": "Fill some cans with sand and use them as bowling pins. Use a ball, such as a small size basketball or tennis ball, to knock them down. Keep track of scores and enjoy your outdoor bowling. This could be played using bottles that are filled with water.",
             "img": "https://cdn.cdnparenting.com/articles/2018/06/425618281-H.webp",
-            "Age": "5-12",
-            "time": 40
+            "Age": "5-13",
+            "time": 30
           },
           {
             "id": "5",
             "name": "Badminton",
             "details": "Fill some cans with sand and use them as bowling pins. Use a ball, such as a small size basketball or tennis ball, to knock them down. Keep track of scores and enjoy your outdoor bowling. This could be played using bottles that are filled with water.",
             "img": "https://cdn.cdnparenting.com/articles/2018/06/586248794-H.webp",
-            "Age": "5-12",
-            "time": 40
+            "Age": "9-18",
+            "time": 90
           },
           {
             "id": "6",
             "name": "Tag off The Ground",
             "details": "This game of tag involves everyone climbing onto whatever he or she can, be it the swings, the seesaw or even slides. As long as it is not the ground, they are safe. The person who is “it” can only tag someone if they are on the ground. So that everyone does not stay off the ground all the time, make sure to have a rule stating that they can only stay off the ground for five seconds at a time.",
             "img": "https://cdn.cdnparenting.com/articles/2018/06/425739265-H.webp",
-            "Age": "5-12",
-            "time": 40
+            "Age": "7-12",
+            "time": 20
           }
 ]

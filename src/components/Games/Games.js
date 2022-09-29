@@ -65,17 +65,17 @@ const Games = () => {
         </div>
         <div className='info'>
             <div>
-            <h3>10kg</h3>
+            <h3>18<small>kg</small></h3>
             <p><small>Weight</small></p>
             </div>
 
             <div>
-            <h3>2</h3>
+            <h3>3.5<small>fit</small></h3>
             <p><small>Height</small></p>
             </div>
 
             <div>
-            <h3>1.5yrs</h3>
+            <h3>8.5<small>yrs</small></h3>
             <p><small>Age</small></p>
             </div>
 
@@ -90,11 +90,11 @@ const Games = () => {
         <h3>Playing Details</h3>
         <div className='info'>
             <h3>Play Time</h3>
-            <p><small>{playTime} seconds</small></p>
+            <p>{playTime} min</p>
         </div>
         <div className='info'>
             <h3>Break Time</h3>
-            <p><small>{breakTime} seconds</small></p>
+            <p>{breakTime} min</p>
         </div>
         <button onClick={notify} className='btn-complete'>Activity Completed!</button>
         <ToastContainer />

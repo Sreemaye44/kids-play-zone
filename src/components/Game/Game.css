@@ -8,6 +8,7 @@
 .card img{
     height: 200px;
     width: 300px;
+    border-radius: 10px;
 }
 .btn-add{
     width: 100%;
@@ -17,6 +18,7 @@
     border: none;
     border-radius: 5px;
 }
+
 @media only screen and (max-width: 600px) {
     .card img{
         height: 200px;

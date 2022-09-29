@@ -1,3 +1,0 @@
-const addTime(time)=>{
-    time
-}

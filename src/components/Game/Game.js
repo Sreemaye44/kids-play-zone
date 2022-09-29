@@ -10,8 +10,8 @@ const Game = (props) => {
         <img src={img} alt="" />
         <h3>{name}</h3>
         <p><small>{details.slice(0,120)}...</small></p>
-        <p>For Age: {Age}</p>
-        <p>Time Required: {time}min</p>
+        <p>For Age: {Age} yrs</p>
+        <p>Time Required: {time} min</p>
         <button onClick={()=>handleAddToCart(game)} className='btn-add'>Add to List</button>
 
        
