@@ -57,7 +57,7 @@ const Games = () => {
         </div>
         <div className='side-bar'>
         <div className='name'>
-            <img src="../../../public/baby.jpg" alt="hi" />
+            <img src={process.env.PUBLIC_URL+"/baby.jpg"}  alt="baby logo" />
             <div>
             <h2>Sagnik Kundu</h2>
             <p><small>Dhaka, Bangladesh</small></p>

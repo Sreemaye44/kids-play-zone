@@ -37,6 +37,11 @@
     align-items: center;
     gap: 15px;
 }
+.name img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
 .info{
     background-color: bisque;
     padding:10px;
