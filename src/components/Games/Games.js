@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Break from '../Break/Break';
-import { addToDb } from '../FakeDb';
+import { addToDb,getFromDb } from '../FakeDb';
 import Game from '../Game/Game';
 import './Games.css';
 
 const Games = () => {
-    const breaktime=[
+    const breakTimeArray=[
         {time:10, id:1},
         {time:15, id:2},
         {time:20,id:3},
@@ -22,11 +22,14 @@ const Games = () => {
 
     },[]);
     const handleAddToCart=game=>{
-        setTime(time + game.time);
+        const newTime = time + game.time
+        setTime(newTime);
+        addToDb("playTime",newTime);
 
     }
     const handleBreakTime=(time)=>{
         setBreakTime(time);
+        addToDb("breakTime",time);
     }
     return (
         <div className='body'>
@@ -68,19 +71,20 @@ const Games = () => {
         <h3>Add a Break</h3>
         <div className='info'>
         {
-              breaktime.map(bktime=><Break bktime={bktime} key={bktime.id} handleBreakTime={handleBreakTime}></Break>)
+            breakTimeArray.map(bktime=><Break bktime={bktime} key={bktime.id} handleBreakTime={handleBreakTime}></Break>)
             }
 
         </div>
         <h3>Playing Details</h3>
         <div className='info'>
             <h3>Play Time</h3>
-            <p><small>{time} seconds</small></p>
+            <p><small>{getFromDb("playTime")} seconds</small></p>
         </div>
         <div className='info'>
             <h3>Break Time</h3>
-            <p><small>{breakTime} seconds</small></p>
+            <p><small>{getFromDb("breakTime")} seconds</small></p>
         </div>
+        <button className='btn-complete'>Activity Completed</button>
 
         </div>
         </div>

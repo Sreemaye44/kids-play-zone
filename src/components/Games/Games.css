@@ -54,3 +54,33 @@
     padding-right: 12px;
     border-radius: 25px;
 }
+.btn-complete{
+    width: 100%;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .body{
+
+        display: flex;
+        flex-direction: column;
+        width:150%;
+        padding:0;
+        
+        
+    }
+    .card-container{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+       
+    }
+    .side-bar{
+        width: 100%;
+           
+  }
+}
