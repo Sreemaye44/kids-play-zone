@@ -18,23 +18,30 @@ const Games = () => {
         {time:30,id:5}
     ];
     const[games,setGames]=useState([]);
-    const[time,setTime]=useState(0);
-    const[breakTime,setBreakTime]=useState(0);
+    const[playTime,setPlayTime]=useState(JSON.parse(getFromDb("playTime")));
+    const[breakTime,setBreakTime]=useState(JSON.parse(getFromDb("breakTime")));
     useEffect(()=>{
         fetch('data.json')
         .then(res=>res.json())
         .then(data=>setGames(data))
 
     },[]);
+
+    useEffect(()=>{
+        addToDb("breakTime",JSON.stringify(breakTime));
+    },[breakTime]);
+
+    useEffect(()=>{
+        addToDb("playTime",JSON.stringify(playTime));
+    },[playTime]);
+
+
     const handleAddToCart=game=>{
-        const newTime = time + game.time
-        setTime(newTime);
-        addToDb("playTime",newTime);
+        setPlayTime( playTime + game.time);
 
     }
     const handleBreakTime=(time)=>{
         setBreakTime(time);
-        addToDb("breakTime",time);
     }
     return (
         <div className='body'>
@@ -83,11 +90,11 @@ const Games = () => {
         <h3>Playing Details</h3>
         <div className='info'>
             <h3>Play Time</h3>
-            <p><small>{getFromDb("playTime")} seconds</small></p>
+            <p><small>{playTime} seconds</small></p>
         </div>
         <div className='info'>
             <h3>Break Time</h3>
-            <p><small>{getFromDb("breakTime")} seconds</small></p>
+            <p><small>{breakTime} seconds</small></p>
         </div>
         <button onClick={notify} className='btn-complete'>Activity Completed!</button>
         <ToastContainer />
