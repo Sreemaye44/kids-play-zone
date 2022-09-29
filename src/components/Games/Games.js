@@ -2,9 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Break from '../Break/Break';
 import { addToDb,getFromDb } from '../FakeDb';
 import Game from '../Game/Game';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 import './Games.css';
 
 const Games = () => {
+    const notify = () => toast("Wow! Played Well");
+
     const breakTimeArray=[
         {time:10, id:1},
         {time:15, id:2},
@@ -84,7 +89,8 @@ const Games = () => {
             <h3>Break Time</h3>
             <p><small>{getFromDb("breakTime")} seconds</small></p>
         </div>
-        <button className='btn-complete'>Activity Completed</button>
+        <button onClick={notify} className='btn-complete'>Activity Completed!</button>
+        <ToastContainer />
 
         </div>
         </div>
