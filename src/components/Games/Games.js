@@ -1,4 +1,3 @@
-import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
 import { addToDb } from '../FakeDb';
 import Game from '../Game/Game';
@@ -6,7 +5,7 @@ import './Games.css';
 
 const Games = () => {
     const[games,setGames]=useState([]);
-    const[cart,setCart]=useState({});
+    const[time,setTime]=useState(0);
     useEffect(()=>{
         fetch('data.json')
         .then(res=>res.json())
@@ -14,9 +13,8 @@ const Games = () => {
 
     },[]);
     const handleAddToCart=game=>{
-        console.log(game);
-        setCart(game);
-        
+        setTime(time + game.time);
+
     }
     return (
         <div className='body'>
@@ -77,7 +75,7 @@ const Games = () => {
         <h3>Playing Details</h3>
         <div className='info'>
             <h3>Play Time</h3>
-            <p><small>{cart.time}seconds</small></p>
+            <p><small>{time} seconds</small></p>
         </div>
         <div className='info'>
             <h3>Break Time</h3>
