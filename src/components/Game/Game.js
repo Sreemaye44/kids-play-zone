@@ -2,7 +2,8 @@ import React from 'react';
 import './Game.css'
 
 const Game = (props) => {
-    const {name, details,Age,time,img}=props.game;
+    const {handleAddToCart,game}=props;
+    const {name, details,Age,time,img}=game;
     
     return (
         <div className='card'>
@@ -11,7 +12,7 @@ const Game = (props) => {
         <p><small>{details.slice(0,120)}...</small></p>
         <p>For Age: {Age}</p>
         <p>Time Required: {time}min</p>
-        <button className='btn-add'>Add to List</button>
+        <button onClick={()=>handleAddToCart(game)} className='btn-add'>Add to List</button>
 
        
         

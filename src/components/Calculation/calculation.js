@@ -1,0 +1,3 @@
+const addTime(time)=>{
+    time
+}
