@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import Break from '../Break/Break';
 import { addToDb } from '../FakeDb';
 import Game from '../Game/Game';
 import './Games.css';
 
 const Games = () => {
+    const breaktime=[
+        {time:10, id:1},
+        {time:15, id:2},
+        {time:20,id:3},
+        {time:25,id:4},
+        {time:30,id:5}
+    ];
     const[games,setGames]=useState([]);
     const[time,setTime]=useState(0);
+    const[breakTime,setBreakTime]=useState(0);
     useEffect(()=>{
         fetch('data.json')
         .then(res=>res.json())
@@ -15,6 +24,9 @@ const Games = () => {
     const handleAddToCart=game=>{
         setTime(time + game.time);
 
+    }
+    const handleBreakTime=(time)=>{
+        setBreakTime(time);
     }
     return (
         <div className='body'>
@@ -55,21 +67,9 @@ const Games = () => {
         </div>
         <h3>Add a Break</h3>
         <div className='info'>
-            <div className='time'>
-            <h4>10</h4>
-            </div>
-            <div className='time'>
-            <h4>10</h4>
-            </div>
-            <div className='time'>
-            <h4>10</h4>
-            </div>
-            <div className='time'>
-            <h4>10</h4>
-            </div>
-            <div className='time'>
-            <h4>10</h4>
-            </div>
+        {
+              breaktime.map(bktime=><Break bktime={bktime} key={bktime.id} handleBreakTime={handleBreakTime}></Break>)
+            }
 
         </div>
         <h3>Playing Details</h3>
@@ -79,7 +79,7 @@ const Games = () => {
         </div>
         <div className='info'>
             <h3>Break Time</h3>
-            <p><small>seconds</small></p>
+            <p><small>{breakTime} seconds</small></p>
         </div>
 
         </div>
